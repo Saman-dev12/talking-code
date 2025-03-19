@@ -175,7 +175,7 @@ export default function VoiceChat({ projectId }: { projectId: string }) {
 
     setIsLoading(true);
     try {
-      const res = await fetch(`{process.env.NEXT_PUBLIC_APP_URL}/api/talk?projectId=${projectId}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/talk?projectId=${projectId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
