@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     const projectId = request.nextUrl.searchParams.get("projectId") || "";
 
     const translateToEnglishResponse = await genAI
-      .getGenerativeModel({ model: "gemini-pro" })
+      .getGenerativeModel({ model: "gemini-1.5-flash" })
       .generateContent(`Translate this to English: ${data.question}`);
 
     const englishText = translateToEnglishResponse.response.text();
